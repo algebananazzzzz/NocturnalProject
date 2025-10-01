@@ -11,7 +11,5 @@ contact_buttons:
 
 external_links:
   # For external links. Optional, remove items to omit from navbar
-  - title: Blog
-    link: https://docs.algebananazzzzz.com/v/nocturnal-project
   - title: Resume #
     asset: dummy.pdf # relative path to src/static

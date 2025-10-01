@@ -1,43 +1,30 @@
 import React, { createContext, useState, useEffect, ReactNode } from "react";
 
-export const ThemeValues = {
-  dark: true,
-  light: false,
-} as const;
-
-export type ThemeValue = typeof ThemeValues[keyof typeof ThemeValues];
+export type Theme = "dark" | "light";
 
 interface ThemeContextType {
-  theme: ThemeValue;
-  changeTheme: (theme: ThemeValue) => void;
+  theme: Theme;
+  toggleTheme: () => void;
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: ThemeValues.dark,
-  changeTheme: () => { },
+  theme: "dark",
+  toggleTheme: () => { },
 });
 
-interface ThemeProviderProps {
-  children: ReactNode;
-}
+const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [theme, setTheme] = useState<Theme>("dark");
 
-const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<ThemeValue>(ThemeValues.dark);
-
-  function changeTheme(theme: ThemeValue) {
-    setTheme(theme);
-  }
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
 
   useEffect(() => {
-    if (theme === ThemeValues.light) {
-      document.body.classList.remove("dark");
-    } else {
-      document.body.classList.add("dark");
-    }
+    document.body.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, changeTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
