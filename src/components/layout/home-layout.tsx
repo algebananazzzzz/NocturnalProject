@@ -28,7 +28,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
 
     return <>
         <body className="flex flex-col min-h-screen bg-white dark:bg-slate-900">
-            <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full border-b dark:border-gray-800 py-3 sm:py-4 md:py-5">
+            <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full py-3 sm:py-4 md:py-5">
                 <nav className="max-w-7xl flex justify-between items-center w-full mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="mr-5 md:mr-8">
                         <Link className="flex-none text-lg md:text-xl font-semibold dark:text-white" to="/">{navbar.title}</Link>
