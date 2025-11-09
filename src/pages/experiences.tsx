@@ -6,6 +6,7 @@ import rawExperienceContent from '@/content/experience.yml';
 import type { ExperiencesContent } from '@/types/experiences';
 import Svg from "@/components/ui/svg";
 import { PageProps } from "gatsby";
+import { pageSection } from "@/styles/tailwind-utils";
 
 const experiences: ExperiencesContent = rawExperienceContent;
 
@@ -16,26 +17,26 @@ const ExperiencePage: React.FC<PageProps> = () => {
   return (
     <HomeLayout>
       <VideoPopupComponent popup={popup} setPopup={setPopup} />
-      <div className="pt-10 md:pt-0 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 flex items-center">
+      <div className={pageSection.headerGrid}>
         <div className="lg:col-span-4">
-          <h1 className="flex-none font-medium text-gray-800 dark:text-gray-200 text-3xl md:text-4xl lg:text-5xl inline-flex items-center">
+          <h1 className={pageSection.title}>
             Experiences
           </h1>
           {
-            experiences.description.map((value) => (
-              <p className="flex mt-5 text-justify text-base md:text-lg text-gray-700 dark:text-gray-400">
+            experiences.description.map((value, idx) => (
+              <p key={`desc-${idx}`} className={pageSection.description}>
                 {value}
               </p>
             ))
           }
         </div>
-        <div className="lg:col-span-3 mt-10 lg:mt-0 hidden lg:flex justify-end">
-          <Svg name="theme/experiences" className="w-112 h-112" />
+        <div className={pageSection.illustrationContainer}>
+          <Svg name="theme/experiences" className={pageSection.illustration} alt="Experiences illustration" />
         </div>
       </div>
       <ol className="mt-12 lg:mt-0 ml-3 lg:max-w-5xl text-justify relative border-l-2 border-solid border-gray-200 dark:border-gray-700">
         {experiences.experiences.map((exp, i, row) => (
-          <li className={`ml-4 md:ml-6 ${i !== (row.length - 1) && "pb-8 md:pb-12"}`}>
+          <li key={`exp-${exp.name}-${i}`} className={`ml-4 md:ml-6 ${i !== (row.length - 1) && "pb-8 md:pb-12"}`}>
             <div className="inline-flex items-center">
               <span className={`absolute flex items-center text-center justify-center w-5 h-5 md:w-7 md:h-7 rounded-full -left-2.5 md:-left-3.5 ring-8 ring-white dark:ring-gray-900 bg-${exp.color}-500 dark:bg-${exp.color}-800`}>
                 <svg className="w-3 md:w-4" viewBox="0 0 24 24" fill="#f9fafb">
@@ -77,4 +78,13 @@ const ExperiencePage: React.FC<PageProps> = () => {
 
 export default ExperiencePage
 
-export const Head = () => <title>Experiences</title>
+export const Head = () => (
+  <>
+    <title>Experiences</title>
+    <meta name="description" content="My professional experience and work history." />
+    <meta property="og:title" content="Experiences" />
+    <meta property="og:description" content="My professional experience and work history." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+  </>
+)

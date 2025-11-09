@@ -1,23 +1,65 @@
 description:
-  - "Learn about my professional experiences that have shaped my journey in [Your Field]."
+  - "My journey as a Computer Science student through internships, projects, and leadership experiences."
 
 experiences:
-  - name: "Internship: [Company Name]"
+  - name: "Software Engineering Intern at [Company Name]"
     description:
-      - "Description of tasks and responsibilities during the internship."
-      - "Details about projects worked on and skills utilized."
-    date: "Start Date - End Date"
+      - "Developed a customer feedback analysis tool using Python and NLP, processing 10,000+ survey responses"
+      - "Collaborated with senior engineers to refactor legacy code, improving performance by 25%"
+      - "Participated in daily standups and sprint planning using Agile methodology"
+      - "Implemented unit tests with Jest, increasing code coverage from 60% to 85%"
+    date: "Jun 2024 - Aug 2024"
     color: blue
     actions:
-      - text: "Recommendation Letter"
-        asset: "dummy.pdf"
+      - text: "Certificate"
+        asset: "internship-certificate.pdf"
 
-  - name: "Mentor: [Workshop Name]"
+  - name: "Teaching Assistant - Data Structures (CS 201)"
     description:
-      - "Overview of the workshop and topics covered."
-      - "Information about assisting participants and facilitating learning."
-    date: "Start Date - End Date"
+      - "Assisted professor with course logistics for 150+ students"
+      - "Led weekly office hours helping students debug code and understand algorithms"
+      - "Graded assignments and provided detailed feedback on coding style and efficiency"
+      - "Created supplementary tutorial materials on trees and graph traversals"
+    date: "Jan 2024 - May 2024"
     color: purple
+
+  - name: "Hackathon Winner - [University] Tech Fest"
+    description:
+      - "Built a real-time collaborative study platform in 24 hours with a team of 4"
+      - "Implemented WebSocket connections for live document editing"
+      - "Won 1st place out of 25 teams and $1,000 prize"
+      - "Presented demo to 200+ attendees and judges"
+    date: "Mar 2024"
+    color: green
     actions:
-      - text: "View Tutorial"
-        link: "https://example.com/workshop-tutorial"
+      - text: "Project Demo"
+        video: "hackathon-demo.mp4"
+
+  - name: "Computer Science Club - Vice President"
+    description:
+      - "Organized weekly coding workshops on topics like Git, React, and Python"
+      - "Coordinated LeetCode study groups with 30+ active members"
+      - "Managed club budget and planned tech talks with industry speakers"
+      - "Increased club membership by 40% through social media outreach"
+    date: "Sep 2023 - Present"
+    color: cyan
+
+  - name: "Undergraduate Research Assistant"
+    description:
+      - "Assisted graduate students with machine learning research project"
+      - "Preprocessed and cleaned datasets with 50,000+ records using Pandas"
+      - "Implemented baseline models and tracked experiments with MLflow"
+      - "Co-authored research paper submitted to undergraduate research conference"
+    date: "May 2023 - Aug 2023"
+    color: orange
+    actions:
+      - text: "Research Poster"
+        asset: "research-poster.pdf"
+
+  - name: "Freelance Web Developer"
+    description:
+      - "Built responsive websites for 3 local small businesses"
+      - "Managed client requirements, timelines, and feedback iterations"
+      - "Deployed sites on Netlify and provided training on content management"
+    date: "Summer 2023"
+    color: pink

@@ -1,52 +1,64 @@
 description:
-  - "Discover my projects where I demonstrate creativity and problem-solving skills."
+  - "Here are some projects I've built while learning and exploring different technologies."
 
 projects:
-  - name: "Nocturnal Project"
-    description: "A succinct description of the project's purpose and functionality"
-    additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
-    date: "Apr 2024"
+  - name: "Campus Event Manager"
+    description: "Full-stack web app for managing university events and RSVPs"
+    additional_description: "Built with React and Node.js, this platform allows students to discover campus events, RSVP, and receive notifications. Features include user authentication, event filtering by category, and an admin dashboard for event organizers."
+    date: "Jan 2024"
     svgIcons:
       - gatsby
-      - aws
-      - terraform
+      - reactjs
       - tailwind
+      - aws
     actions:
-      - text: Repo
-        link: https://github.com/algebananazzzzz/NocturnalProject
-      - text: Demo
+      - text: GitHub
+        link: https://github.com/[your-username]/[project-name]
+      - text: Live Demo
+        link: https://[your-demo-url].com
         color: purple
-        video: demo.mp4
 
-  - name: "Project 2"
-    description: "A succinct description of the project's purpose and functionality"
-    additional_description: "A detailed description on the project's architecture, key components, and any unique selling points."
-    date: "Apr 2024"
+  - name: "Study Buddy"
+    description: "ML-powered app that generates flashcards from lecture notes"
+    additional_description: "Developed a Python application using natural language processing to automatically extract key concepts from PDF lecture notes and generate study flashcards. Implemented with spaCy for NLP, Flask for the backend, and a simple React frontend."
+    date: "Sep 2023"
     svgIcons:
       - gatsby
-      - aws
-      - terraform
+      - reactjs
       - tailwind
+      - aws
     actions:
-      - text: Repo
-        link: https://github.com/algebananazzzzz/NocturnalProject
-      - text: Demo
-        color: purple
+      - text: GitHub
+        link: https://github.com/[your-username]/[project-name]
+      - text: Demo Video
         video: demo.mp4
+        color: purple
 
-  - name: "Project 3"
-    description: "A succinct description of the project's purpose and functionality"
-    additional_description: "A detailed description on the project's architecture, key components, and any unique selling points."
-    date: "Apr 2024"
+  - name: "Algorithm Visualizer"
+    description: "Interactive web tool for visualizing sorting and graph algorithms"
+    additional_description: "Created an educational platform to help students understand how algorithms work through step-by-step visualizations. Includes sorting algorithms (QuickSort, MergeSort, BubbleSort) and graph algorithms (BFS, DFS, Dijkstra's)."
+    date: "May 2023"
     svgIcons:
       - gatsby
-      - aws
-      - terraform
+      - reactjs
       - tailwind
+      - aws
     actions:
-      - text: Repo
-        link: https://github.com/algebananazzzzz/NocturnalProject
-      - text: Demo
+      - text: GitHub
+        link: https://github.com/[your-username]/[project-name]
+      - text: Try It
+        link: https://[your-demo-url].com
         color: purple
-        video: demo.mp4
-        
+  - name: "Discord Study Bot"
+    description: "Bot that helps study groups track pomodoro sessions"
+    date: "Nov 2023"
+    actions:
+      - text: GitHub
+        link: https://github.com/[your-username]/[project-name]
+
+  - name: "Personal Budget Tracker"
+    description: "CLI tool for tracking expenses with data visualization"
+    date: "Aug 2023"
+    actions:
+      - text: GitHub
+        link: https://github.com/[your-username]/[project-name]

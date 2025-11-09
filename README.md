@@ -1,229 +1,205 @@
 # Nocturnal Project
 
-## Introduction
+> **A stylish, dark-mode portfolio template you can customize in 5 minutes—no coding required.**
 
-Nocturnal is a stylish and customizable portfolio site template built with GatsbyJS (React) and TailwindCSS. The project uses Github Actions to build the Gatsby site and deploy to Github Pages.
+🌐 **[View Demo Site](https://algebananazzzzz.github.io/NocturnalProject/)**
 
-Please visit the [demo site](https://algebananazzzzz.github.io/NocturnalProject/) for a preview.
+---
 
-## Features 
+## Why Nocturnal?
 
-1. **Main feature:** Provides a content abstraction level where all content is sourced from YAML files. Because of this, individuals can create fully personalized and functional portfolio site in less than 5 minutes without touching React code!
+✨ **5-Minute Setup** – Edit YAML files, push to GitHub, done
+🎨 **Beautiful by Default** – Modern design with dark mode built-in
+⚡ **Zero Code Changes** – Customize everything through simple YAML files
+🚀 **Auto-Deploy** – GitHub Actions builds and deploys automatically
+📱 **Fully Responsive** – Looks great on mobile, tablet, and desktop
+🛠️ **Production Ready** – Built with React, Gatsby, and TailwindCSS
 
-2. **CI/CD:** Using Github Actions, every commit will trigger an automation pipeline to build and deploy the site to Github Pages. No manual deployment steps are required. In other words, individuals can deploy their own live portfolio site everytime they push code!
+---
 
-## Prerequisites
+## Quick Start
 
-There are no prerequisites in this project. However, if you want to develop or customize your portfolio further, you'll need to download `GatsbyJS` to preview your portfolio locally.
-
-1. Install Gatsby on your local machine using this [instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/).
-
-2. After cloning the repository, within the directory, download required npm packages using this command.
-
-```shell
+# 1. Clone and install
+```bash
+git clone https://github.com/algebananazzzzz/NocturnalProject.git
+cd NocturnalProject
 npm install
 ```
 
-3. Preview the deployment site with this command.
-
-```shell
+2. Preview locally, visit http://localhost:8000
+```bash
 gatsby develop
 ```
 
-## Installation 
+3. Customize content (edit YAML files in src/content/)
+   - navbar.yml       (your name, social links)
+   - aboutme.yml      (introduction, bio)
+   - project.yml      (your projects)
+   - skills.yml       (technical skills, certifications)
+   - experience.yml   (work history, timeline)
 
-1. To clone the repository, use this command.
-
-```shell
-git clone https://github.com/algebananazzzzz/NocturnalProject.git
+4. Deploy to GitHub Pages
+```bash
+git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git add -A && git commit -m "My portfolio"
+git push -u origin main
 ```
 
-2. Create a new repository in your GitHub account.
+**That's it!** GitHub Actions will automatically build and deploy your site.
 
-3. Remove the existing git origin.
+---
 
-```shell
-git remote rm origin
-```
+## What You Get
 
-4. Add the new repository as the new git origin.
-```shell
-git add remote origin ssh://github.com/<your_new_repo>.git
-```
+### 🎯 Ready-to-Use Sections
+- **About** – Introduction with custom sections (education, interests, etc.)
+- **Projects** – Showcase with tech stack icons, demos, and videos
+- **Skills** – Certifications, tech icons, and skill categories
+- **Experiences** – Professional timeline with color-coded milestones
+
+### 🎨 Built-in Features
+- Dark/light mode with one-click toggle
+- Responsive navigation
+- Video popup modals for project demos
+- Social contact buttons
+- Custom SVG icon system
+- PDF/document attachments
+
+### ⚙️ Technical Stack
+- **Gatsby** – Blazing fast static site generation
+- **React** – Modern component architecture
+- **TailwindCSS** – Utility-first styling
+- **TypeScript** – Type-safe development
+- **GitHub Actions** – Automated CI/CD pipeline
+
+---
+
+## Documentation
+
+Choose the guide that fits your needs:
+
+| Guide | For | What's Inside |
+|-------|-----|---------------|
+| **[Getting Started](docs/GETTING_STARTED.md)** | First-time users | Installation, local dev, deployment |
+| **[Customization Guide](docs/CUSTOMIZATION.md)** | Content editors | YAML file reference with examples |
+| **[Developer Guide](docs/DEVELOPER_GUIDE.md)** | Code contributors | Architecture, components, styling |
+
+**Quick links:**
+- [How to customize content?](docs/CUSTOMIZATION.md) – Complete YAML reference
+- [How to deploy?](docs/GETTING_STARTED.md#deployment) – GitHub Pages setup
+- [How to modify styles?](docs/DEVELOPER_GUIDE.md#styling-with-tailwind) – Tailwind customization
+
+---
+
+## Customization
+
+All content is managed through **5 simple YAML files** in `src/content/`:
+
+| File | What to Edit |
+|------|--------------|
+| `navbar.yml` | Your name, social links |
+| `aboutme.yml` | Introduction, bio, education |
+| `project.yml` | Projects, demos, tech stacks |
+| `skills.yml` | Certifications, technologies |
+| `experience.yml` | Work history, achievements |
+
+**Also customize:**
+- **SVG Icons** – Add custom icons to `src/assets/svg/`
+- **Static Files** – PDFs, videos, images in `static/`
+
+**📚 [Complete customization guide →](docs/CUSTOMIZATION.md)** – YAML reference, SVG management, examples
+
+---
 
 ## Deployment
 
-> Minimal steps are required as deployment is taken care by Github Actions!
+### GitHub Pages (Recommended)
 
-1. Modify pathPrefix (optional):
+1. **Create a new GitHub repository**
+2. **Push your code:**
+   ```bash
+   git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   git push -u origin main
+   ```
+3. **Enable GitHub Pages:**
+   - Go to Settings → Pages
+   - Source: Deploy from branch `gh-pages`
 
-If your GitHub Pages repository is not served from the root domain (for example, it’s at https://username.github.io/repo-name), set the pathPrefix in `gatsby-config.ts` to "/repo-name". This ensures that your portfolio loads correctly from the repository subpath.
+**Your site will be live at:** `https://YOUR_USERNAME.github.io/YOUR_REPO/`
 
-```ts
-const config: GatsbyConfig = {
-  // Change this according to your repository name
-  pathPrefix: `/NocturnalProject`,
-  ...
-}
+GitHub Actions automatically rebuilds your site on every push.
+
+**📚 [Detailed deployment guide →](docs/GETTING_STARTED.md#deployment)**
+
+---
+
+## Project Structure
+
+```
+NocturnalProject/
+├── src/
+│   ├── content/          ← Edit these YAML files to customize
+│   │   ├── navbar.yml
+│   │   ├── aboutme.yml
+│   │   ├── project.yml
+│   │   ├── skills.yml
+│   │   └── experience.yml
+│   ├── assets/svg/       ← Add custom icons here
+│   └── pages/            ← React components (no changes needed)
+├── static/               ← Place PDFs, images, videos here
+└── docs/                 ← Documentation guides
 ```
 
-2. Add and commit your changes
+---
 
-```shell
-git add -A
-git commit -m "Initial Commit"
-```
+## FAQ
 
-3. Set checkout branch to main
+**Q: Do I need to know React/Gatsby?**
+A: Nope! Just edit YAML files. No coding needed for content changes.
 
-```shell
-git checkout -b main
-```
+**Q: Can I change colors and styles?**
+A: Yes! See the [Developer Guide](docs/DEVELOPER_GUIDE.md#styling-with-tailwind) for Tailwind customization.
 
-4. Push to remote origin
+**Q: How do I add my resume/CV?**
+A: Place your PDF in `static/` and reference it in `navbar.yml`. [Example →](docs/CUSTOMIZATION.md#navbar-configuration)
 
-```shell
-git remote set-url origin https://github.com/<your_new_repo>.git
-git push --set-upstream origin main
-```
+**Q: Can I add custom sections?**
+A: Absolutely! YAML files support any custom sections you create. [Guide →](docs/CUSTOMIZATION.md#advanced-tips)
 
-## Customizing Your Portfolio Content
+**Q: Is dark mode automatic?**
+A: Yes! Visitors can toggle between light/dark mode, and their preference is saved.
 
-> Edit the YAML files to update your portfolio content—no code changes are needed!
+---
 
-Your portfolio content is managed through YAML files under `src/content/`. Each file represents a section of your site, such as **About**, **Projects**, **Skills**, and **Experiences**. You can edit these files to personalize your portfolio.
+## Examples
 
-### General Guidelines
+Want inspiration? Check out these sections in the demo:
 
-1. **SVG Icons**: Place SVGs in `src/assets/svg` and reference by name in YAML.  
-2. **Static Assets**: Place PDFs, images, or videos in `static/`. Reference them with `asset: "filename.ext"` or `video: filename.mp4` for video previews.
-3. **Adding Sections**: You can create new sections by following the same YAML structure provided in the files.  
-4. **Text Styling**: Use arrays for multiple paragraphs; they are rendered with proper spacing automatically.
+- [About Page](https://algebananazzzzz.github.io/NocturnalProject/) – Custom sections with icons
+- [Projects](https://algebananazzzzz.github.io/NocturnalProject/projects) – Tech stack display
+- [Skills](https://algebananazzzzz.github.io/NocturnalProject/skills) – Certifications and icons
+- [Experiences](https://algebananazzzzz.github.io/NocturnalProject/experiences) – Timeline with colors
 
+---
 
-### 1. Navbar Section (`navbar.yml`)
-```yaml
-title: "My Portfolio"
+## License
 
-contact_buttons:
-  - svgName: "contact/gitlab"
-    link: "https://gitlab.com/<your_account>"
-  - svgName: "contact/github"
-    link: "https://github.com/<your_account>"
-  - svgName: "contact/linkedin"
-    asset: "dummy.pdf"
+MIT License – See [LICENSE.txt](LICENSE.txt) for details.
 
-external_links:
-  - title: "Blog"
-    link: "https://docs.example.com/blog"
-  - title: "Resume"
-    asset: "dummy.pdf"
-```
+**Feel free to use this template for your portfolio!** If you find it useful, consider giving it a star ⭐
 
-- **title**: The main title displayed in your navbar.  
-- **contact_buttons**: List of social or contact links. Use `svgName` for an icon (placed under `src/assets/svg`). Use `link` for external URLs or `asset` for static files in `/static`.  
-- **external_links**: Additional links displayed in the navbar. Use `link` for external URLs or `asset` for static files.
+---
 
+## Contributing
 
-### 2. About Section (`about.yml`)
+Contributions are welcome! Whether it's:
+- 🐛 Bug reports
+- 💡 Feature suggestions
+- 🔧 Code improvements
+- 📚 Documentation updates
 
-```yaml
-description:
-  - "Welcome to my portfolio page! 🌱"
-  - "As a [Your Profession], I [Your Professional Statement]."
-endeavours:
-  - text: "I'm aspiring to pass the XXX Certification"
-    svgName: "aws"
-```
+**[Open an issue](https://github.com/algebananazzzzz/NocturnalProject/issues)** or submit a pull request.
 
-- **title**: Your main introduction line.  
-- **description**: Array of paragraphs to display under your title.  
+---
 
-### 3. Projects (`projects.yml`)
-
-```yaml
-description:
-  - "Explore my projects and showcase your expertise."
-projects:
-  - name: Project Name
-    description: "Short summary of the project"
-    additional_description: "Detailed project description"
-    date: "Apr 2024"
-    svgIcons:
-    - gatsby
-    - react
-    actions:
-    - text: Repo
-      link: "https://github.com/username/project"
-    - text: Demo
-      video: "demo.mp4"
-```
-
-- **description**: Intro text for the Projects section.  
-- **projects**: List of projects.  
-- **description / additional_description (optional)**: Short and long descriptions.  
-- **date (optional)**: When the project was done.  
-- **svgIcons (optional)**: List of tech/tool icons used.  
-- **actions (optional)**: Buttons linking to Repo, Demo, or other resources. Use `link` for external URLs, `video` for local video files in `/static`.
-
-- **Other Sections**: Categories like `Upcoming Projects` or `Archived Projects` can be added with the same structure.
-
-### 4. Skills (`skills.yml`)
-
-```yaml
-description:
-  - "Discover my skills and certifications."
-certificates:
-  - text: "AWS Certified XXX"
-    link: "https://www.credly.com/.../badge"
-    svgName: aws
-skillicons:
-  - gatsby
-  - react
-  - tailwindcss
-  - aws
-  - terraform
-  - docker
-skills:
-  Proficient:
-    - "Skill 1 description"
-    - "Skill 2 description"
-  Competent:
-    - "Skill 3 description"
-    - "Skill 4 description"
-```
-
-- **certificates (optional)**: List certifications with optional link and SVG icon.  
-- **skillicons (optional)**: Technologies to showcase visually.  
-- **skills (optional)**: Group skills under sections like `Proficient` (you may add your own section e.g. `Foundational`).
-
-### 5. Experiences (`experiences.yml`)
-
-```yaml
-description:
-  - "Learn about my professional experiences."
-experiences:
-  - name: "Internship: Company Name"
-    description:
-    - "Task details 1"
-    - "Task details 2"
-    date: "Start - End"
-    color: blue
-    actions:
-    - text: "Recommendation Letter"
-      asset: "letter.pdf"
-```
-
-- **description**: Intro for the Experiences section.  
-- **experiences**: List of experiences.  
-- **description (optional)**: Array of tasks/responsibilities.  
-- **date**: Time period.  
-- **color (optional)**: Tailwind color for the experience card.  
-- **actions (optional)**: Links to resources (`link` for external, `asset` for `/static` files).
-
-
-## License and Contribution
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for more details.
-
-We welcome contributions to this project! Whether it's reporting a bug, discussing a feature, or submitting a pull request, your involvement is appreciated.
+**Made with ❤️ using Gatsby, React, and TailwindCSS**
