@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2025-11-09
+
 ### Added
 
 #### Documentation
@@ -118,4 +120,5 @@ If you're upgrading from a previous version:
 
 ---
 
-[Unreleased]: https://github.com/algebananazzzzz/NocturnalProject/compare/main...HEAD
+[Unreleased]: https://github.com/algebananazzzzz/NocturnalProject/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/algebananazzzzz/NocturnalProject/compare/v0.2.0...v1.0.0
