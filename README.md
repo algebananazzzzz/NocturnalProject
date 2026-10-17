@@ -1,6 +1,6 @@
 # Nocturnal Project
 
-> **A stylish, dark-mode portfolio template you can customize in 5 minutes—no coding required.**
+> **A stylish, dark-mode portfolio template you can customize in 5 minutes, no coding required.**
 
 🌐 **[View Demo Site](https://algebananazzzzz.github.io/NocturnalProject/)**
 
